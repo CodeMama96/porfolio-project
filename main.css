@@ -1,0 +1,137 @@
+:root {
+    --green:--green;
+    --white: #ffffff;
+    --black: #000000;
+  }
+  
+
+* {
+    color: var(--fontColor);
+    font-family: helvetica;
+  }
+  
+  body {
+      background: var(--bg);
+  }
+
+
+li {
+    list-style-type: none;
+
+    margin: 0 2vw;
+
+    font-size: 3vh;
+    
+  }
+  
+  .list {
+    list-style: square;
+  }
+
+
+  a{
+    text-decoration: none;
+
+    /*below I changed the color*/
+  color: black;
+  /*I added some padding*/
+  padding: 2vw;
+
+  /* font-family: monospace; */
+  }
+
+
+  a:hover{
+    background-color: #C6E9FF;
+
+  }
+
+
+  .light-theme {
+    --bg: var(--green);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+  }
+  
+  .dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+  }
+
+  .btn {
+    position: absolute;
+  top: 20px;
+  left: 250px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  color: var(--btnFontColor);
+  background-color: var(--btnBg);
+}
+.btn:focus { outline-style: none; }
+
+
+nav{
+    width: 100vw;
+    background-color: #D6EFFF;
+  }
+
+
+
+ul{
+    margin: 0;
+    padding: 4vw;
+    display: flex;
+    /* putting li into rows */
+
+  
+  }
+  
+  body{
+    margin: 0;
+  }
+
+
+  button{
+    display: none;
+  }  
+
+  @media only screen and (max-width: 500px) {
+    /*shows elements in a column*/
+    ul{
+      flex-direction: column;
+    }
+    
+    /* deletes margin on top or bottom of the a tag*/
+    li{
+      margin: 0;
+    }
+   /* makes sure that the a tag will take the entire screen*/
+    a{
+      display: block;
+    }
+
+     
+  button{
+    /*makes the button visible*/
+    display: block;
+    
+    /*since we are here, we can style it a little bit!*/
+    padding: 2vw;
+    font-size: 3vh;
+    background-color: #AFE0FF;
+    border: none;
+    
+    /*outline none removes the default blue border that appears anytime you click on the button*/
+    outline: none;
+    
+    cursor: pointer;
+
+     /*this put the button on the left*/
+     align-self: flex-start;
+  }
+  }
