@@ -1,33 +1,13 @@
-:root {
-    --green:--green;
-    --white: #ffffff;
-    --black: #000000;
-  }
-  
 
-* {
-    color: var(--fontColor);
-    font-family: helvetica;
-  }
-  
-  body {
-      background: var(--bg);
-  }
 
 
 li {
     list-style-type: none;
-
     margin: 0 2vw;
 
     font-size: 3vh;
     
   }
-  
-  .list {
-    list-style: square;
-  }
-
 
   a{
     text-decoration: none;
@@ -83,8 +63,9 @@ nav{
 
 
 ul{
+    display: block;
     margin: 0;
-    padding: 4vw;
+    padding: 3vw;
     display: flex;
     /* putting li into rows */
 
@@ -119,8 +100,7 @@ ul{
   button{
     /*makes the button visible*/
     display: block;
-    
-    /*since we are here, we can style it a little bit!*/
+
     padding: 2vw;
     font-size: 3vh;
     background-color: #AFE0FF;
@@ -134,4 +114,34 @@ ul{
      /*this put the button on the left*/
      align-self: flex-start;
   }
+
+
+
+  /* toggle hamburger */
+
+  .container {
+    display: inline-block;
+    cursor: pointer;
   }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+  }
+

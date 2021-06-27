@@ -9,38 +9,74 @@
 </head>
 
 <body class="dark-theme">
-   
+   <div>
       <nav>
-       <ul>
-
-        <button> 🞬 </button>        
+        <ul>
+            <div class="container" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
+              
+              <script>
+              function myFunction(x) {
+                x.classList.toggle("change");
+              }
+              </script>
+            <!-- <button onclick="myFunction()">🞬</button>         -->
            <li>
-               <a href=#projects>Projects</a>
+               <a href=#projects id='projects'>Projects</a>
             </li>
             <li>
-                <!-- link three -->
-                <a href="#cv"> CV </a>
-              </li>
-           
-           <li>
-               <a href=#blogs>Blogs</a>
+                <a href="#cv" id='resume'> Resume </a>
             </li>
-           <li>
-               <a href=#about>About</a>
+           
+            <li>
+               <a href=#blogs id='blogs'>Blogs</a>
+            </li>
+            <li>
+               <a href=#about id='about'>About</a>
             </li>
        </ul>
       </nav>
+    </div>
+    <div>
     <h1>Task List</h1>
     <p id="msg">Current tasks:</p>
     <ul>
-      <li class="list">Add visual styles</li>
-      <li class="list">Add light and dark themes</li>
-      <li>Enable switching the theme</li>
+      <li class="list">Fix hamburger</li>
+      <li class="list">add more css</li>
+      <li class="list">post videos</li>
+      <li class="list">add blogs</li>
+      <li class="list">Add an email form for people to stay in contact</li>
+
+      <li> </li>
     </ul>
-    <div>
-        <button class="btn">Dark</button>
-      </div>
-    <script src="app.js"></script>
+</div>
+<div>
+    <div class="projects-container mt-4">
+        <h1>Projects</h1>
+    </div>
+    <div class="resumes-container mt-4">
+        <h1>Resume</h1>
+    </div>
+    <div class="about-container mt-4">
+        <h1>About</h1>
+        <h3>Hello, My name is Alicia and I am a software developer in Florida. Prior to becoming a software developer</h3>
+        <p>I was a realtor in New York City. I pride myself for the skills I developed in sales and marketing.</p>
+        <p>What led me to becoming to a software developer was my love for solving problems and working on attainable goals</p>
+        <br>
+        <h3>Hobbies</h3>
+        <p>I like to explore and check out different coffee shops. I also run a company on the side importing coffee.</p>
+        
+    </div>
+
+</div>
+<script src="navbar.js"></script>
     <noscript>You need to enable JavaScript to view the full site.</noscript>
-</body>
+
+    </body>
+
+  
+    
 </html>
