@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Explaining Asynchronous Javascript</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Explaining Asynchronous Javascript</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Have you ever wondered what buffering meant or when you saw the fan whenever you were waiting for the website to load. One might say, “oh…
+</section>
+<section data-field="body" class="e-content">
+<section name="d971" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="9f58" id="9f58" class="graf graf--h3 graf--leading graf--title">Explaining Asynchronous Javascript</h3><figure name="8e9f" id="8e9f" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="1*W_8IZyYZ-_TrZBdkIRZ7jw.png" data-width="1494" data-height="1028" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*W_8IZyYZ-_TrZBdkIRZ7jw.png"></figure><p name="ea28" id="ea28" class="graf graf--p graf-after--figure">Have you ever wondered what buffering meant or when you saw the fan whenever you were waiting for the website to load. One might say, “oh my computer is thinking.” There is a chance that what is actually happening is asynchronous computing, there could be a function either being executed or waiting to be executed in order for the website to work thoroughly by processing data such as through fetch request that is waiting to fulfill or reject a promise or you’ve clicked or submitted a feature, or it’s answering a callback function. As described, Asynchronous Javascript includes callbacks, promises, and <strong class="markup--strong markup--p-strong">async</strong>/await.</p><p name="cd1d" id="cd1d" class="graf graf--p graf-after--p">If you’re brand new to Javascript, this article may be going completely over your head. Most people aren’t searching anything remotely related to asynchronous computing. So, if you’re here, that means you may know a thing or two.</p><p name="1ab4" id="1ab4" class="graf graf--p graf-after--p">To start, Asynchronous Javascript was created for application performance and responsiveness. It originated from nested functions as callbacks.</p><p name="f593" id="f593" class="graf graf--p graf-after--p">Asynchronous programming is a form of parallel programming that allows a unit of work to run separately from the primary application thread(<br>or call stack). For example, in order for you to continue to use a website and while you’re searching or continuing onto a new page, behind the scenes, that website is connecting the dots and completing tasks.</p><p name="f0df" id="f0df" class="graf graf--p graf-after--p">Why we might use Asynchronous Javascript, a hypothetical example.</p><figure name="4222" id="4222" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*ErNiG7UzrS5DBo0cH0naTg.png" data-width="1334" data-height="794" src="https://cdn-images-1.medium.com/max/800/1*ErNiG7UzrS5DBo0cH0naTg.png"></figure><p name="cb06" id="cb06" class="graf graf--p graf-after--figure">Say you want to bake bread and synchronous computing only allow you to begin by reading the instructions, wait for the oven to full preheat, knead the bread, get the ingredients mixed with the dough, wait for the dough to rise then put the bread in the oven, wait for the bread to bake and then take it out and then clean up your mess. If you had to do this in exact order, it would take a long time.</p><figure name="bbb8" id="bbb8" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*kOmZIA8fansceAuDvsjkMA.png" data-width="1102" data-height="496" src="https://cdn-images-1.medium.com/max/800/1*kOmZIA8fansceAuDvsjkMA.png"></figure><p name="f016" id="f016" class="graf graf--p graf-after--figure">Each function above would be blocking the call stack or main thread.</p><p name="ba90" id="ba90" class="graf graf--p graf-after--p">Asynchronous programming would be while you wait for your oven to pre-heat, you’d be able to get the ingredients together, knead the bread, wait for it to rise and while you wait for it to rise, you could clean up your mess, use the bathroom, put away any dishes, then once you hear the oven alert you that it’s been preheated, you can put the bread inside and then go take a nap while you wait for your bread to fully bake.</p><p name="13b5" id="13b5" class="graf graf--p graf-after--p">The first function, recipeInstruction that’s taking in the URL example could in theory be the callback function to another function that represents the fetch request. <code class="markup--code markup--p-code">fetch()</code> taking a single parameter — the URL of a resource you want to fetch from the network — and returning a promise. The promise is an object representing the completion or failure of the async operation. Neither of the possible outcomes have happened yet, so the fetch operation is currently waiting on the result of the browser trying to complete the operation at some point in the future(MDN).</p><figure name="9794" id="9794" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*vYgDnUe4ToNpRp1H2eDPDw.png" data-width="940" data-height="196" src="https://cdn-images-1.medium.com/max/800/1*vYgDnUe4ToNpRp1H2eDPDw.png"></figure><p name="7c05" id="7c05" class="graf graf--p graf-after--figure">Now if you wanted something to happen after the async behavior of the fetch request has happened, in the above scenario, say before putting the bread in the oven, you’d have to wait for the oven to preheat first. This is where .then would come in. Calling preheatOven wouldn’t ensure that the oven has preheated before the 2nd function is called, unless the first function is executing async code such as a fetch request.</p><p name="bc8d" id="bc8d" class="graf graf--p graf-after--p graf--trailing">Obviously, someone might not be this productive when baking bread. But you get the idea that it’s more efficient to use asynchronous computing in order to get other functions executed while waiting on another function to be executed.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@weenum-alicia" class="p-author h-card">Alicia Weenum</a> on <a href="https://medium.com/p/7a98401cfdef"><time class="dt-published" datetime="2021-03-03T02:18:31.122Z">March 3, 2021</time></a>.</p><p><a href="https://medium.com/@weenum-alicia/explaining-asynchronous-javascript-7a98401cfdef" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on July 1, 2021.</p></footer></article></body></html>

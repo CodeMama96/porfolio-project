@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Validate, Authenticate and Secure — Oh my!</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Validate, Authenticate and Secure — Oh my!</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+I wanted to use dev.to to create a blog post for my “Library of Books” project in terms of that it is leaned towards technology and…
+</section>
+<section data-field="body" class="e-content">
+<section name="c59f" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="0262" id="0262" class="graf graf--h3 graf--leading graf--title">Validate, Authenticate and Secure — Oh my!</h3><figure name="0d74" id="0d74" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="0*i1dqWChkc47EemVK.png" data-width="1000" data-height="420" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/0*i1dqWChkc47EemVK.png"></figure><p name="8cd9" id="8cd9" class="graf graf--p graf-after--figure">Topic: Validation, authentication and securing a password. These seemingly all sound similar but different and why am I using them in my project?</p><figure name="358a" id="358a" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="0*rIPu629u_AbyvaFp.png" data-width="880" data-height="150" src="https://cdn-images-1.medium.com/max/800/0*rIPu629u_AbyvaFp.png"></figure><p name="431a" id="431a" class="graf graf--p graf-after--figure">When studying them, they seemed easy and obvious but once I saw it in my code, I found myself getting confused at the fact that has_secure_password(located in my user model) and then “validates :email, presence: true” do the same thing.</p><p name="ec33" id="ec33" class="graf graf--p graf-after--p">What these methods do is adds methods to set and authenticate against a BCrypt password. This mechanism requires you to have a XXX_digest attribute (in this case password_digest is located in my CreateUser class). Or in other words BCrypt will store a salted, hashed version of the users’ passwords in the database in a column called password_digest. Once a password is salted and hashed, there is no way for anyone to decode it.</p><p name="cb65" id="cb65" class="graf graf--p graf-after--p">Lets get on with this has_secure_password. To start, has_secure_password is a macro. A macro is a method that when called, creates methods for you. The macro has_secure_password is being called just like any other ruby method. It works in conjunction with a gem called BCrypt and it allows us to store passwords in a secure way that isn’t a plain text password. has_secure_password is also a method called authenticate. You don’t see this method because it’s “invisible.”</p><p name="33a7" id="33a7" class="graf graf--p graf-after--p">Well, what are validations? Validations are used to ensure that only valid data is saved into your database.<br>Also in the validation, you’ll see “uniqueness.” Uniqueness is a validation helper that I am using in my project to make sure that an email is not used more than once.</p><p name="3737" id="3737" class="graf graf--p graf-after--p">In conclusion, I wanted to give a layout of these different attributes when validating, securing a password and authenticating the users. These words can seem easily jumbled up and I wanted to go in depth to explain what they mean. They do mean very similar things but can be used in different contexts.</p><p name="bb5e" id="bb5e" class="graf graf--p graf-after--p">Kindly your Software Engineer,</p><p name="47db" id="47db" class="graf graf--p graf-after--p graf--trailing">Alicia</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@weenum-alicia" class="p-author h-card">Alicia Weenum</a> on <a href="https://medium.com/p/e60b5a61d085"><time class="dt-published" datetime="2021-03-25T19:46:10.352Z">March 25, 2021</time></a>.</p><p><a href="https://medium.com/@weenum-alicia/validate-authenticate-and-secure-oh-my-e60b5a61d085" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on July 1, 2021.</p></footer></article></body></html>

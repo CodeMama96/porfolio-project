@@ -1,10 +1,53 @@
 
+* {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    /* display: block; */
+    
+    }
+
 .body{
-    background-color: #E0D3DE;
+    background-color:#ffdd7d;
+    
+    /* height: 200px;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    background-image: url('./cool-background.png');
 
 }
 
+
+
+
+
+.background {
+
+  position: relative;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+    }
+
+    
+    .background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top:0;
+    left:0;
+   
+    }
+    
+
 li {
+    align-items: center;
     list-style-type: none;
     margin: 0 2vw;
 
@@ -45,6 +88,7 @@ li {
   }
 
   .btn {
+    align-items: center;
     position: absolute;
   top: 20px;
   left: 250px;
@@ -59,8 +103,13 @@ li {
 
 
 nav{
-    width: 100vw;
-    background-color: #AB9BB8;
+
+   
+    color: #fff;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    
   }
 
 
@@ -122,17 +171,21 @@ ul{
 
   /* toggle hamburger */
 
-  .container {
+   .container {
     display: inline-block;
     cursor: pointer;
-  }
-  
+  } 
+   
   .bar1, .bar2, .bar3 {
     width: 35px;
     height: 5px;
     background-color: #333;
     margin: 6px 0;
     transition: 0.4s;
+  }
+  img {
+    display: block;
+    max-width: 100%;
   }
   
   .change .bar1 {
@@ -148,18 +201,18 @@ ul{
   }
   }
 
-.about{
-    background-color: #BA9FBE
-}
+/* .about{
+    background-color: #ffdd7d
+} */
 
-.projects-container{
+/* .projects-container{
  background-color: #D8A7CA;
-}
+} */
 
-.hobbies{
+/* .hobbies{
     background-color: #BA9FBE;
-}
+} */
 
-.resumes-container{
+/* .resumes-container{
     background-color: #C7B8EA;
-}
+} */

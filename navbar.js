@@ -6,3 +6,20 @@ function changeToggle() {
       x.style.display = "none";
     }
 }
+
+
+function myFunction(x) {
+           
+  console.log("I changed!")
+  var y = document.getElementById("navContainer")
+  if (y.style.display === "none") {
+      y.style.display = "block";
+  } else {
+      y.style.display = "none";
+      
+  }
+
+  x.classList.toggle("change");
+
+}
+
