@@ -66,6 +66,10 @@ p{
     text-align: center;
 }
 
+a{
+    color: #F3EED9;
+}
+
 header,
 section{
     padding: 4rem 0;
