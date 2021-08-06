@@ -67,8 +67,11 @@ p {
 a {
   color: #f3eed9;
   text-decoration: none;
-  
 }
+
+a:hover {
+    color: hotpink;
+  }
 
 header,
 section {
