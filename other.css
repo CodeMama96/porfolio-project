@@ -26,6 +26,8 @@ body {
   /* rem vs px */
 }
 
+
+
 body,
 h1,
 h2,
@@ -64,6 +66,8 @@ p {
 
 a {
   color: #f3eed9;
+  text-decoration: none;
+  
 }
 
 header,
