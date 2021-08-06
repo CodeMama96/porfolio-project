@@ -58,7 +58,7 @@ p {
 .text-center {
   text-align: right;
   font-size: 35px;
-  padding-right: 1em;
+  padding-right: 2em;
   opacity: 75%;
 }
 
@@ -126,7 +126,6 @@ section {
   width: min(95%);
   background-image: url('./img/image-05.jpg');
   
-  
 
   color:black;
   height: 100vh;
@@ -135,7 +134,10 @@ section {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  background-repeat: no-repeat;
   -msn-background-size: cover;
+  background-attachment: fixed;
+
   
 }
 
