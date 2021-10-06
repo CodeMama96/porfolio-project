@@ -47,7 +47,7 @@ h3 {
 }
 
 img {
-  display: block;
+  display: flex;
   max-width: 100%;
 }
 
@@ -60,7 +60,7 @@ p {
 .text-center {
   text-align: right;
   font-size: 35px;
-  padding-right: 2em;
+  padding-right: .5em;
   opacity: 75%;
 }
 
@@ -86,7 +86,8 @@ section {
 }
 .container {
   margin-inline: auto;
-  width: min(90%, 60.5rem);
+ 
+  width: min(100%, 60.5rem);
 }
 
 .split {
@@ -119,6 +120,7 @@ section {
 .bg-primary {
   color: var(--clr-neutral-100);
   background-color: var(--clr-primary-400);
+  width: 100%;
 }
 
 .bg-dark {
