@@ -1,6 +1,6 @@
 :root {
   --clr-primary-200: #f3eed9;
-  --clr-primary-400: #85578f;
+  --clr-primary-400: #f0b34a;
 
   --clr-neutral-100: #fff;
   --clr-neutral-900: #222c2a;
@@ -19,7 +19,7 @@
 body {
   font-family: var(--ff-primary);
   font-weight: 400;
-  font-size: 1.3124rem;
+  font-size: 1rem;
   line-height: 1.6;
   /* rem vs px */
 }
@@ -62,7 +62,7 @@ p {
 
 .text-center {
   text-align: right;
-  font-size: 35px;
+  font-size: 15px;
   padding-right: .5em;
   opacity: 75%;
 }
